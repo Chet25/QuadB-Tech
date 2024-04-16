@@ -9,12 +9,11 @@ function TaskList() {
 	//console.log(list);
 	return (
 		<>
-		{/* map through the list array */}
-		{/* todo list */}
+			{/* map through the list array */}
+			{/* todo list */}
 			{list.map((elem, index) => {
 				return (
 					<div key={index} className="list_element">
-
 						{/* todo checkbox */}
 						{elem.done ? (
 							<input
@@ -23,6 +22,7 @@ function TaskList() {
 								onChange={() => {
 									dispatch(toggleElem(index, list));
 								}}
+								checked
 							/>
 						) : (
 							<input
@@ -37,7 +37,7 @@ function TaskList() {
 						{/* todo text */}
 						<div className="list_text">
 							<p
-							className=""
+								className=""
 								key={index}
 								style={{
 									textDecoration: elem.done
@@ -47,17 +47,17 @@ function TaskList() {
 							>
 								{elem.text}
 							</p>
-							</div>
-							{/* delete button  */}
+						</div>
+						{/* delete button  */}
 
-							<button
-								className="delete_button"
-								onClick={() => {
-									dispatch(removeElems(index, list));
-								}}
-							>
-								<i className="bi bi-trash3-fill"></i>
-							</button>
+						<button
+							className="delete_button"
+							onClick={() => {
+								dispatch(removeElems(index, list));
+							}}
+						>
+							<i className="bi bi-trash3-fill"></i>
+						</button>
 					</div>
 				);
 			})}

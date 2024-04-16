@@ -3,7 +3,7 @@
 This is a To-Do application build using ReactJS that allows users to add todo tasks , view them , mark them as completed while doing them and delete tasks if the user wishes to do so.
 
 ## Technologies
-![alt text](image.png) ![alt text](image-2.png)
+![alt text](./public/image.png) ![alt text](./public/image-2.png)
 
 ## Setup 
 To use the todo app you can visit : 
