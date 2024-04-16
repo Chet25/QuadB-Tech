@@ -1,0 +1,244 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #010a01;
+}
+
+/* heading text */
+h1 {
+    color: #f20089;
+    font-family: "Sacramento", cursive;
+    font-weight: 400;
+    font-style: normal;
+    margin: 1rem 0;
+    text-align: center;
+
+    font-size: 6rem;
+    /* color: #fff; */
+    color: #fff;
+    text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #bc13fe,
+        0 0 82px #bc13fe,
+        0 0 92px #bc13fe,
+        0 0 102px #bc13fe,
+        0 0 151px #bc13fe;
+
+    animation: pulsate 4s ease-in-out infinite;
+}
+
+/* todo input  */
+.todo_input {
+    width: 15rem;
+    border: 0.1rem solid #fff;
+    border-radius: 0.3rem;
+    padding: 0.4em;
+    box-shadow:
+        0 0 0.2rem #fff,
+        0 0 0.2rem #fff,
+        0 0 0.8rem #bc13fe,
+        0 0 2.8rem #bc13fe,
+        inset 0 0 1.3rem #bc13fe;
+
+    background-color: transparent;
+    color: #fff;
+    outline: none;
+
+    transition: 0.15s all ease-in-out;
+    -moz-transition: 0.15s all ease-in-out;
+    -webkit-transition: 0.15s all ease-in-out;
+
+    font-family: Poppins;
+
+    padding: 0.75rem 1rem;
+}
+
+.todo_input:focus {
+    box-shadow:
+        0 0 0.8rem #fff,
+        0 0 0.8rem #fff,
+        0 0 2.2rem #bc13fe,
+        0 0 5rem #bc13fe,
+        inset 0 0 1.3rem #bc13fe;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    gap: 1rem;
+}
+
+/* submit button  */
+button {
+    padding: 10px;
+    margin-left: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #f20089;
+    color: white;
+    font-family: Poppins;
+
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+
+    background: none;
+    box-shadow: none;
+
+    font-size: 14px;
+    color: white;
+    text-align: center;
+    letter-spacing: 2px;
+    padding: 15px 20px;
+    margin: 0px 4px;
+    cursor: pointer;
+    transition: 0.15s all ease-in-out;
+    -moz-transition: 0.15s all ease-in-out;
+    -webkit-transition: 0.15s all ease-in-out;
+}
+
+.submit_button {
+    border: 2px solid #97e355;
+    border-radius: 0.3rem;
+    box-shadow:
+        0 0 0.2rem #fff,
+        0 0 0.2rem #fff,
+        0 0 0.8rem #97e355,
+        0 0 2.8rem #97e355,
+        inset 0 0 1.3rem #97e355;
+}
+
+.submit_button:hover,
+.submit_button:focus {
+    border: 2px solid transparent;
+    color: #111;
+    background: #97e355;
+    box-shadow:
+        0px 0px 5px #97e355,
+        0px 0px 25px #97e355,
+        0px 0px 50px #97e355,
+        0px 0px 200px #97e355;
+}
+.submit_button:focus {
+    outline: none;
+}
+
+/* delete button  */
+.delete_button {
+    margin-inline-start: auto;
+    margin-bottom: 5px;
+    aspect-ratio: 1;
+    width: 3rem;
+}
+
+i {
+    font-size: 1.3rem;
+    color: #fff;
+    text-shadow:
+        0 0 10px #fff,
+        /* 0 0 21px #fff, */ 
+        0 0 42px #fff,
+        /* 0 0 82px #fff, */ 
+        /* 0 0 92px #fff, */ 
+        /* 0 0 102px #fff, */ 
+        0 0 151px #fff;
+}
+
+i:hover {
+    color: #f71119;
+    text-shadow:
+        0 0 10px #f71119,
+        /* 0 0 21px #f71119, */ 
+        0 0 42px #f71119,
+        /* 0 0 82px #f71119, */ 
+        /* 0 0 92px #f71119, */
+        0 0 102px #f71119,
+        0 0 151px #f71119;
+
+    transition: 0.1s all ease-in-out;
+    -moz-transition: 0.1s all ease-in-out;
+    -webkit-transition: 0.1s all ease-in-out;
+}
+
+
+
+/*todo  checkbox */
+.todo_checkbox {
+    padding: 10px;
+    width: 1.5rem;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+/* todo text  */
+p {
+    color: white;
+    font-family: poppins;
+    margin: 0;
+    width: 100%;
+}
+
+/* individual todo */
+.list_element {
+    display: flex;
+    /* padding: 10px; */
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+.list_text {
+    max-width: 40vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.list_text>p{
+    word-wrap: break-all;
+    overflow-wrap: break-word;
+}
+
+
+
+/* pulsating animstion of heading text */
+
+@keyframes pulsate {
+    100% {
+        text-shadow:
+            0 0 4px #fff,
+            0 0 11px #fff,
+            0 0 19px #fff,
+            0 0 40px #f09,
+            0 0 80px #f09,
+            0 0 90px #f09,
+            0 0 100px #f09,
+            0 0 150px #f09;
+    }
+    50% {
+        text-shadow:
+            0 0 4px #fff,
+            0 0 11px #fff,
+            0 0 19px #fff,
+            0 0 40px #f09,
+            0 0 80px #f09,
+            /* 0 0 90px #f09, */
+            /* 0 0 100px #f09, */
+            0 0 150px #f09;
+    }
+
+    0% {
+        text-shadow:
+            0 0 4px #fff,
+            0 0 10px #fff,
+            0 0 18px #fff,
+            0 0 38px #f09,
+            0 0 73px #f09,
+            0 0 80px #f09,
+            0 0 94px #f09,
+            0 0 140px #f09;
+    }
+}
